@@ -42,7 +42,7 @@ Fullstack functional admin vending machine website created for Temasek Polytechn
 - JavaScript
 - Node.js with express
 
-**Setup and Installation**
+## Setup and Installation
 1. Clone the repository
 ```
 git clone https://github.com/Troaxx/vendy.git
