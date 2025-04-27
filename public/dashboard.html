@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>Vending Machine Admin (TP)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <main>
+        <div class="sidebar">
+            <h2>TP Vending Machines</h2>
+            <ul>
+                <li><a href="dashboard.html" onclick="window.location.href = 'dashboard.html'">Dashboard</a></li>
+                <li><a href="manage-machines.html" onclick="window.location.href = 'manage-machines.html'">Manage Vending Machines</a></li>
+                <li><a href="#add-item-database" onclick="window.location.href = 'add-item-database.html'">Manage/Add Items</a></li>
+                <li><a href="#logs.html" onclick="window.location.href = 'logs.html'">Logs</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2 id="welcome">Welcome, Admin.</h2>
+            <hr id="welcomeline">
+        <section class="dashboard">
+            <div class="card" onClick = "window.location.href = 'manage-machines.html'">Total Vending Machines <span id="totalMachines">10</span></div>
+        </section>
+
+            <h2>Vending Machine Locations</h2>
+            <br> 
+            <br>
+            <div class="vending_machines_information">
+                <div class="vending_machines_container">
+                        <div class="locations" data-id="1">
+                            <span class="machine-id">M1</span>
+                            <span class="school">School of Informatics & IT (IIT)</span>
+                            <span class="block_level">Block 3, Level 3</span>
+                            <span class="payment-method">All Payment Methods</span>
+                        </div>
+                        <div class="locations" data-id="2">
+                            <span class="machine-id">M2</span>
+                            <span class="school">School of Applied Science (ASC)</span>
+                            <span class=block_level>Block 7, Level 3</span>
+                            <span class="payment-method">All Payment Methods</span>
+                        </div>
+                        <div class="locations" data-id="3">
+                            <span class="machine-id">M3</span>
+                            <span class="school">School of Business (BUS)</span>
+                            <span class=block_level>Block 26, Level 3</span>
+                            <span class="payment-method">Cash Only</span>
+                        </div>
+                        <div class="locations" data-id="4">
+                            <span class="machine-id">M4</span>
+                            <span class="school">School of Business (BUS)</span>
+                            <span class=block_level>Block 26, Level 4</span>
+                            <span class="payment-method">Contactless Payment Only</span>
+                        </div>
+                        <div class="locations" data-id="5">
+                            <span class="machine-id">M5</span>
+                            <span class="school">School of Design (DES)</span>
+                            <span class=block_level>Block 28, Level 3</span>
+                            <span class="payment-method">Cash Only</span>
+                        </div>
+                        <div class="locations" data-id="6">
+                            <span class="machine-id">M6</span>
+                            <span class="school">School of Design (DES)</span>
+                            <span class=block_level>Block 28, Level 5</span>
+                            <span class="payment-method">Contactless Payment Only</span>
+                        </div>
+                        <div class="locations" data-id="7">
+                            <span class="machine-id">M7</span>
+                            <span class="school">School of Engineering (ENG)</span>
+                            <span class=block_level>Block 15, Level 3</span>
+                            <span class="payment-method">All Payment Methods</span>
+                        </div>
+                        <div class="locations" data-id="8">
+                            <span class="machine-id">M8</span>
+                            <span class="school">School of Engineering (ENG)</span>
+                            <span class=block_level>Block 15, Level 5</span>
+                            <span class="payment-method">All Payment Methods</span>
+                        </div>
+                        <div class="locations" data-id="9">
+                            <span class="machine-id">M9</span>
+                            <span class="school">School of Humanities & Social Sciences (HSS)</span>
+                            <span class=block_level>Block 1, Level 2</span>
+                            <span class="payment-method">Cash Only</span>
+                        </div>
+                        <div class="locations" data-id="10">
+                            <span class="machine-id">M10</span>
+                            <span class="school">School of Humanities & Social Sciences (HSS)</span>
+                            <span class=block_level>Block 1, Level 3</span>
+                            <span class="payment-method">Contactless Payment Only</span>
+                        </div>
+                    </div>
+                        <div id="info-display" class="info-display">
+                            <p>Select a vending machine to see its details here.</p>
+                        </div>
+                </div>
+        </div>   
+        <div class="footer">&copy; 2025 Daniella Han. All Rights Reserved.</div>
+    </main>
+    <script src="js/dashboard-script.js"></script>
+    <script src="js/logs-script.js"></script>
+
+</body>
+</html>
