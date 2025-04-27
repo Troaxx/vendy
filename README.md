@@ -48,7 +48,12 @@ Fullstack functional admin vending machine website created for Temasek Polytechn
 ```
 git clone https://github.com/Troaxx/vendy.git
 ```
-2. Open `dashboard.html` in your web browser to view the application.
+2. Run the sql script in MySQL `init.sql`
+3. Type `npm install` in terminal
+4. Replace your credentials in `db-connections.js`
+5. Type `node server.js` in terminal to start the website 
+6. Open `localhost:8080/dashboard.html` in your web browser to view the website
+- _Note: You can replace the port number in `server.js` under `const PORT =` line. 8080 is just a placeholder._
 
 ## Project Structure
 - `public` - Whole project folder
