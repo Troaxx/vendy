@@ -1,0 +1,141 @@
+.vending_machines_information {
+    display: flex;
+    flex-direction: row;
+    gap: 5px; 
+    align-items: flex-start; 
+}
+
+.vending_machines_container {
+    max-width: 900px;
+    padding: 0 24px;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.info-display {
+    flex: 2;
+    position: sticky;
+    top: 20px;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-display h3,
+.info-display h4 {
+    margin-top: 0;
+}
+
+
+
+.locations {
+    display: flex;
+    position: relative;
+    justify-content: space-between; /* Space between text and block_level */
+    font-size: 20px;
+    align-items: center;
+    background-color: white;
+    border: 2px solid #5A189A;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 10;
+    flex: 1;
+}
+
+
+.page-title {
+    color: #1f2937;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    padding: 0 24px;
+}
+
+.locations-container{
+    flex: 1;
+}
+
+
+.locations {
+    background: linear-gradient(to right, #6d28d9, #5b21b6);
+    border-radius: 8px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.locations:hover {
+    background-color: #574bd1;
+}
+
+.machine-id {
+    background-color: white;
+    color: #6d28d9;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.school {
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    flex-grow: 1;
+}
+
+.block_level {
+    color: #f3e8ff;
+    padding: 6px 16px;
+    border-radius: 9999px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 18px;
+}
+
+.payment-method {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 18px;
+    margin-left: auto;
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .locations {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .payment-method {
+        margin-left: 0;
+    }
+
+    .block_level, 
+    .payment-method {
+        align-self: flex-start;
+    }
+}
+
+
+
+
+
