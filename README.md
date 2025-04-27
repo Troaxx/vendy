@@ -41,6 +41,7 @@ Fullstack functional admin vending machine website created for Temasek Polytechn
 - CSS
 - JavaScript
 - Node.js with express
+- MySQL for backend/database
 
 ## Setup and Installation
 1. Clone the repository
