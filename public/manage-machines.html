@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/manage-machines.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Manage Machines</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="sidebar">
+        <h2>TP Vending Machines</h2>
+        <ul>
+            <li><a href="dashboard.html" onclick="window.location.href = 'dashboard.html'">Dashboard</a></li>
+            <li><a href="manage-machines.html" onclick="window.location.href = 'manage-machines.html'">Manage Vending Machines</a></li>
+            <li><a href="#add-item-database" onclick="window.location.href = 'add-item-database.html'">Manage/Add Items</a></li>
+            <li><a href="#logs.html" onclick="window.location.href = 'logs.html'">Logs</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="welcome">Edit Machine Details</h2>
+        <hr id="welcomeline">
+
+        <section class="dashboard">
+            <div class="card" onClick = "window.location.href = 'manage-machines.html'">Total Vending Machines <span id="number">10</span></div>
+        </section>
+
+        <div id="select-machine">
+            <form id="selectMachine">
+                <label for="vendingMachineDropdown">Select Machine:</label>
+                <select id="vendingMachineDropdown">
+                    <option value="none">Select Machine...</option>
+                    <option value="1">Vending Machine 1 (IIT BLK 3 LV3)</option>
+                    <option value="2">Vending Machine 2 (ASC BLK 7 LV3)</option>
+                    <option value="3">Vending Machine 3 (BUS BLK 26 LV3)</option>
+                    <option value="4">Vending Machine 4 (BUS BLK 26 LV4)</option>
+                    <option value="5">Vending Machine 5 (DES BLK 28 LV3)</option>
+                    <option value="6">Vending Machine 6 (DES BLK 28 LV5)</option>
+                    <option value="7">Vending Machine 7 (ENG BLK 15 LV3)</option>
+                    <option value="8">Vending Machine 8 (ENG BLK 15 LV5)</option>
+                    <option value="9">Vending Machine 9 (HSS BLK 1 LV2)</option>
+                    <option value="10">Vending Machine 10 (HSS BLK 1 LV3)</option>
+                </select>
+            </form>
+
+            <div class="machine-status">
+                <label for="machineStatus">Machine Status:</label>
+                <select id="machineStatus">
+                    <option value="1">Available</option>
+                    <option value="2">Out of Order</option>
+                    <option value="3">Under Maintenance</option>
+                    <option value="4">Decommissioned</option>
+                </select>
+            </div>
+            <div class="machine-controls">
+                <button id="saveChangesBtn" class="save-button" style="display: none;">Save Changes</button>
+            </div>
+        </div>
+            <div id="itemsContainer" class="items-container"></div>
+
+
+            
+            <br>
+                
+            <div id="message" style="font-style: italic;"></div>
+
+
+
+        <div id="addItemPopup" style="display: none;">
+            <div class="popup-content">
+                <h3>Add Item to Machine</h3>
+                <div class="form-group">
+                    <label for="itemSelect">Select Item:</label>
+                    <select id="itemSelect" required>
+                        <option value="">Select an item...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemQuantity">Quantity:</label>
+                    <input type="number" id="itemQuantity" min="1" required>
+                </div>
+
+                <div class="popup-buttons">
+                    <button type="button" class="save-button" onclick="saveItem()">Add Item</button>
+                    <button type="button" onclick="closeAddItemPopup()">Cancel</button>
+                </div>
+            </div>
+        <div class="footer">&copy; 2025 Daniella Han. All Rights Reserved.</div>
+        <script src="js/logs-script.js"></script>
+        <script src="js/manage-machines-script.js"></script>
+</body>
+</html>
+

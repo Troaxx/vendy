@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/logs.css">
+    <title>Logs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="sidebar">
+        <h2>TP Vending Machines</h2>
+        <ul>
+            <li><a href="dashboard.html" onclick="window.location.href = 'dashboard.html'">Dashboard</a></li>
+            <li><a href="manage-machines.html" onclick="window.location.href = 'manage-machines.html'">Manage Vending Machines</a></li>
+            <li><a href="#add-item-database" onclick="window.location.href = 'add-item-database.html'">Manage/Add Items</a></li>
+            <li><a href="#logs.html" onclick="window.location.href = 'logs.html'">Logs</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2 id="welcome">Logs</h2>
+        <hr id="welcomeline">
+
+        <table id="logs-table">
+            <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Machine ID</th>
+                    <th>Item ID</th>
+                    <th>Quantity</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="footer">&copy; 2025 Daniella Han. All Rights Reserved.</div>
+
+    <script src="js/logs-script.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/add-item-data.css">
+    <title>Manage Items</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Admin Dashboard</h1>
+    </div>
+    <div class="sidebar">
+        <h2>TP Vending Machines</h2>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="manage-machines.html">Manage Vending Machines</a></li>
+            <li><a href="add-item-database.html" class="active">Manage/Add Items</a></li>
+            <li><a href="logs.html">Logs</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!-- Tab Navigation -->
+        <div class="tab-navigation">
+            <button class="tab-button active" data-tab="add-to-db">Add Items to Database</button>
+            <button class="tab-button" data-tab="add-to-machine">Add Items to Machine</button>
+        </div>
+
+        <!-- Add to Database Tab -->
+        <div class="tab-content active" id="add-to-db">
+            <h2>Add New Item to Database</h2>
+            <div class="form-container">
+                <form id="addItemForm" class="add-item-form">
+                    <div class="form-group">
+                        <label for="itemName">Item Name</label>
+                        <input type="text" id="itemName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemCost">Cost ($)</label>
+                        <input type="number" id="itemCost" step="0.10" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemImage">Image</label>
+                        <input type="file" id="itemImage" accept="image/*" required>
+                        <div class="image-preview" id="imagePreview"></div>
+                    </div>
+
+                    <button type="submit" class="submit-button">Add to Database</button>
+                </form>
+            </div>
+
+            <div class="existing-items">
+                <h3>Existing Items in Database</h3>
+                <div class="items-grid" id="existingItems"></div>
+            </div>
+        </div>
+
+        <!-- Add to Machine Tab -->
+        <div class="tab-content" id="add-to-machine">
+            <h2>Add Items to Vending Machine</h2>
+            <div class="form-container">
+                <form id="addToMachineForm" class="add-item-form">
+                    <div class="form-group">
+                        <label for="vendingMachineSelect">Select Vending Machine</label>
+                        <select id="vendingMachineSelect" required>
+                            <option value="">Select a machine...</option>
+                            <option value="1">Vending Machine 1 (IIT BLK 3 LV3)</option>
+                            <option value="2">Vending Machine 2 (ASC BLK 7 LV3)</option>
+                            <option value="3">Vending Machine 3 (BUS BLK 26 LV3)</option>
+                            <option value="4">Vending Machine 4 (BUS BLK 26 LV4)</option>
+                            <option value="5">Vending Machine 5 (DES BLK 28 LV3)</option>
+                            <option value="6">Vending Machine 6 (DES BLK 28 LV5)</option>
+                            <option value="7">Vending Machine 7 (ENG BLK 15 LV3)</option>
+                            <option value="8">Vending Machine 8 (ENG BLK 15 LV5)</option>
+                            <option value="9">Vending Machine 9 (HSS BLK 1 LV2)</option>
+                            <option value="10">Vending Machine 10 (HSS BLK 1 LV3)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itemSelect">Select Item</label>
+                        <select id="itemSelect" required disabled>
+                            <option value="">Select machine first...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="number" id="quantity" min="1" required>
+                    </div>
+
+                    <button type="submit" class="submit-button">Add to Machine</button>
+                </form>
+            </div>
+
+            <div id="machineItemStatus" class="status-message"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification"></div>
+
+    <div class="footer">&copy; 2025 Daniella Han. All Rights Reserved.</div>
+
+    <script src="js/add-item-data.js"></script>
+    <script src="js/logs-script.js"></script>
+</body>
+</html>
