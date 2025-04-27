@@ -6,9 +6,9 @@ Fullstack functional admin vending machine website created for Temasek Polytechn
 
 ## Key Features
 1) **Admin dashboard quick view**
-   - Quick view of total vending machines
-   - Vending machine locations
-   - Utilises CRUD to retrieve information regarding the information per vending machine such as full location, payment method, items available within the vending machine, machine status and vendor name)
+- Quick view of total vending machines
+- Vending machine locations
+- Utilises CRUD to retrieve information regarding the information per vending machine such as full location, payment method, items available within the vending machine, machine status and vendor name)
      
 2) **Manage vending machines**
   - Able to manage per vending machine
@@ -23,18 +23,18 @@ Fullstack functional admin vending machine website created for Temasek Polytechn
   - Will warn the user if there is an existing item
 
 4) **Adding Items to specific vending machines**
-   - User selects a vending machine
-   - When the vending machine is selected, the website will display current number of items in the vending machine out of the total items in the database. Example below:
+- User selects a vending machine
+- When the vending machine is selected, the website will display current number of items in the vending machine out of the total items in the database. Example below:
      ![image](https://github.com/user-attachments/assets/d8c39317-c11c-4154-85aa-a0435001dc8c)
-   - Add item (user cannot add item unless vending machine is selected)
-   - Input the quantity
-   - Click "Add to Machine"
-   - Items will be shown the next time in manage vending machines page
+- Add item (user cannot add item unless vending machine is selected)
+- Input the quantity
+- Click "Add to Machine"
+- Items will be shown the next time in manage vending machines page
   
 5) **Logs function**
-   - Each CRUD action is logged into the database
-   - Logs will show the operation, machine ID affected, item ID affected (if any), quantity and timestamp.
-   - Useful for the admin to track which actions have been performed
+- Each CRUD action is logged into the database
+- Logs will show the operation, machine ID affected, item ID affected (if any), quantity and timestamp.
+- Useful for the admin to track which actions have been performed
 
 ## Technologies Used
 - HTML
